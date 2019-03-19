@@ -1,0 +1,107 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+  <link href="https://fonts.googleapis.com/css?family=Quicksand" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <title>Inventory</title>
+</head>
+<body class="">
+
+<div class="container-fluid">
+  <span class="">
+    <div class="custom-control custom-switch my-1">
+      <input type="checkbox" class="custom-control-input" id="switch">
+      <label class="custom-control-label font-qs" for="switch">Dark Mode</label>
+    </div>
+  </span>
+</div>
+
+<div class="container-fluid">
+  <div class="row">
+
+    <div class="col-12 offset-md-1 col-md-3 shadow-sm py-4">
+      <h1 class="display-4">Inventory</h1>
+      <form class="" id="item-form">
+        <div class="form-group">
+          <label for="inputAddress">Item name</label>
+          <input type="name" class="form-control" id="item-name" placeholder="ex. Behr Grey Paint">
+        </div>
+        <div class="form-row">
+          <div class="form-group col-md-6">
+            <label for="size">Container Size</label>
+            <input type="amount" class="form-control" id="size" placeholder="ex. 1.5 Gallon">
+          </div>
+          <div class="form-group col-md-6">
+            <label for="quantity">Quantity</label>
+            <input type="number" class="form-control" id="quantity" placeholder="Total # of items">
+          </div>
+        </div>
+        <div class="form-group pb-3">
+          <label for="condition">Condition: <span id="show-cond"></span></label>
+          <input type="range" class="custom-range" min="1" max="5" id="condition">
+        </div>
+        <button type="submit" class="btn btn-block btn-primary">Add Item</button>
+      </form>
+    </div>
+
+
+
+    <div class="col-12 offset-md-1 col-md-5 my-4 shadow-sm text-dark">
+      <div class="form-group col-md-6">
+        <input type="filter" class="form-control" id="filter" aria-describedby="filter" placeholder="Filter Items">
+      </div>
+      <table class="table table-sm">
+        <thead>
+          <tr>
+            <!-- <th scope="col">#</th> -->
+            <th scope="col">Name</th>
+            <th scope="col">Size</th>
+            <th scope="col">Condition</th>
+            <th scope="col">Qty</th>
+          </tr>
+        </thead>
+        <tbody id="collection">
+          <tr>
+
+          </tr>
+        </tbody>
+      </table>
+      <hr>
+      <button type="clear" class="btn btn-dark clear-items">Clear Items</button>
+    </div><!--COLUMN-->
+
+  </div><!--ROW-->
+</div>
+
+<div class="container py-3 my-2 shadow">
+  <div class="row mt-2" id="row">
+    <!-- <div id="card" class="card my-3">
+      <div class="card-body">
+        <h5 id="d-name" class="card-title text-dark"> Card</h5>
+        <h6 id="d-condition" class="card-subtitle mb-2 text-muted">Current date displays here</h6>
+        <p class="card-text text-dark" id="d-quantity">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+      </div>
+    </div> -->
+
+
+
+  </div><!--ROW-->
+</div><!--CONTAINER-->
+
+
+
+  <!-- Optional JavaScript -->
+  <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+  <script src="date.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
